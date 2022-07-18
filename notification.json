@@ -1,0 +1,13 @@
+{
+  "notfication": {
+    "body": "Firebase Cloud Message Body",
+    "title": "Firebase Cloud Message Title",
+    "subtitle": "Firebase Cloud Message Subtitle"
+  },
+  "data": {
+    "type": "UPDATED",
+    "resource": "CONTACTS",
+    "payload": [{"id": 2345},{"id": 2345}]
+  },
+  "registration_ids": ["foqJGkC5jkUWjjcGVv73Il:APA91bEvGuq9Zjm3KiTMS_YqK09g4zNfEcEWoBljfAp2ReenKrVxqweDMUi0JrZCz5ecoUoF8QgZ25DNtSxspKQ2BH4hJsXHv_K4RRtL3XroNj1YhT7hv6-HSKPAWKCdgl8wPi6ntD4N"]
+}
