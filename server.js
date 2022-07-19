@@ -19,15 +19,18 @@ app.post('/sendToAll', (req, res, next) => {
         "title": "Firebase Cloud Message Title",
         "subtitle": "Firebase Cloud Message Subtitle"
     };
-    var dataPayload = [{"id": 2345},{"id": 2345}]
+    var dataPayload = [{"id": 2346},{"id": 2346}]
 
     var data = {
         "type": "UPDATED",
         "resource": "CONTACTS",
-        "payload": dataPayload
+        "payload": dataPayload,
+        "red": 163,
+        "green": 57,
+        "blue": 57
     };
 
-    var fcm_tokens = ['eZZmGHLuiUL4oGHmHCaS8G:APA91bHOmd9JoUCao0TGzO-DSMFu8ES1nEfglGsQ8FY1yZfEVG0Ad_tw5jYf4tqU3aLjQPdKTtwsXdT7br26dl73ZOmI48vCL1OEsbBJ9E8z_FnmejGCfnF7Vo2ERWqf7ZKrG1aeRSR3'];
+    var fcm_tokens = ['foqJGkC5jkUWjjcGVv73Il:APA91bEvGuq9Zjm3KiTMS_YqK09g4zNfEcEWoBljfAp2ReenKrVxqweDMUi0JrZCz5ecoUoF8QgZ25DNtSxspKQ2BH4hJsXHv_K4RRtL3XroNj1YhT7hv6-HSKPAWKCdgl8wPi6ntD4N'];
 
     var notification_body = {
         'notification': notification,
@@ -43,7 +46,7 @@ app.post('/sendToAll', (req, res, next) => {
     fetch('https://fcm.googleapis.com/fcm/send',{
         'method':'POST',
         'headers':{
-            'Authorization':'key='+'AAAA8TYPjoE:APA91bFDJ0fRq22Po5HcM2L_QU7TZHzFT7b-qj-P6LMwtKPpUooo-TizSmkrza4ke5UWB4H4rwPOAvD1V0MKVMCTwVFH99XMeadVv16ki6HyE7m6rl8gTfpowKYf617XQsI9KfVmIDPi',
+            'Authorization':'key='+'AAAACIFjokQ:APA91bH-a14ZZiLOjSgsgI4qVcABz-P4yTnC1b2cMYCyJBEjRRoir5RIN06O1GqmRKUUXRKzg97ESmXeEdCdMva_dHKVWrIpitWWT_gsZJcmX-7gkQXBHLNEAH-K_nS_kg0mw-xS87sf',
             'Content-Type':'application/json'
         },
         'body':JSON.stringify(notification_body)
