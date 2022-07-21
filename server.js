@@ -19,18 +19,188 @@ app.post('/sendToAll', (req, res, next) => {
         "title": "Firebase Cloud Message Title",
         "subtitle": "Firebase Cloud Message Subtitle"
     };
-    var dataPayload = [{"id": 2346},{"id": 2346}]
+
+    var contactAddPayload = {
+        "id":1306,
+        "firstName":"Jake",
+        "lastName":"Paul",
+        "companyName":"",
+        "department":"",
+        "mobileNumbers":{
+           "numberList":[
+              {
+                 "number":"+27763510073",
+                 "type":"mobile",
+                 "default":true
+              }
+           ]
+        },
+        "emails":{
+           "emailList":[
+              {
+                 "email":"jakepaul@gmail.com",
+                 "type":"work",
+                 "default":false
+              }
+           ]
+        },
+        "websiteUrl":"",
+        "country":"",
+        "ringtone":"",
+        "profileImage":"",
+        "namePrefix":"",
+        "nameSuffix":"",
+        "phoneticFirst":"",
+        "phoneticMiddle":"",
+        "phoneticLast":"",
+        "nickname":"",
+        "savedAs":"",
+        "birthDate":"",
+        "eventList":{
+           "eventList":[
+              {
+                 "date":"",
+                 "label":"",
+                 "default":false
+              }
+           ]
+        },
+        "relationship":"",
+        "chatList":{
+           "chatList":[
+              {
+                 "name":"",
+                 "label":"",
+                 "default":false
+              }
+           ]
+        },
+        "internetCallList":{
+           "internetCallList":[
+              {
+                 "name":"",
+                 "label":"",
+                 "default":false
+              }
+           ]
+        },
+        "customFieldList":{
+           "customFieldList":[
+              {
+                 "name":"",
+                 "label":"",
+                 "default":false
+              }
+           ]
+        },
+        "notes":"",
+        "jobTitle":"",
+        "province":"",
+        "unitStreet":"",
+        "city":"",
+        "middleName":"",
+        "postCode":"",
+        "source":"manual"
+     }
+
+     var contactUpdatedPayload = {
+        "id":1306,
+        "firstName":"Jake",
+        "lastName":"Paul",
+        "companyName":"",
+        "department":"",
+        "mobileNumbers":{
+           "numberList":[
+              {
+                 "number":"+27763510073",
+                 "type":"mobile",
+                 "default":true
+              }
+           ]
+        },
+        "emails":{
+           "emailList":[
+              {
+                 "email":"paul@yahoo.co.us",
+                 "type":"work",
+                 "default":false
+              }
+           ]
+        },
+        "websiteUrl":"",
+        "country":"",
+        "ringtone":"",
+        "profileImage":"",
+        "namePrefix":"",
+        "nameSuffix":"",
+        "phoneticFirst":"",
+        "phoneticMiddle":"",
+        "phoneticLast":"",
+        "nickname":"",
+        "savedAs":"",
+        "birthDate":"",
+        "eventList":{
+           "eventList":[
+              {
+                 "date":"",
+                 "label":"",
+                 "default":false
+              }
+           ]
+        },
+        "relationship":"",
+        "chatList":{
+           "chatList":[
+              {
+                 "name":"",
+                 "label":"",
+                 "default":false
+              }
+           ]
+        },
+        "internetCallList":{
+           "internetCallList":[
+              {
+                 "name":"",
+                 "label":"",
+                 "default":false
+              }
+           ]
+        },
+        "customFieldList":{
+           "customFieldList":[
+              {
+                 "name":"",
+                 "label":"",
+                 "default":false
+              }
+           ]
+        },
+        "notes":"",
+        "jobTitle":"",
+        "province":"",
+        "unitStreet":"",
+        "city":"",
+        "middleName":"",
+        "postCode":"",
+        "source":"manual"
+     }
+
+    var contactDeletePayload =
+    [
+        {
+            "id": 1306
+        } 
+    ]
 
     var data = {
         "type": "UPDATED",
+        "topic": "CONTACTS",
         "resource": "CONTACTS",
-        "payload": dataPayload,
-        "red": 163,
-        "green": 57,
-        "blue": 57
+        "payload": contactUpdatedPayload,
     };
 
-    var fcm_tokens = ['foqJGkC5jkUWjjcGVv73Il:APA91bEvGuq9Zjm3KiTMS_YqK09g4zNfEcEWoBljfAp2ReenKrVxqweDMUi0JrZCz5ecoUoF8QgZ25DNtSxspKQ2BH4hJsXHv_K4RRtL3XroNj1YhT7hv6-HSKPAWKCdgl8wPi6ntD4N'];
+    var fcm_tokens = ['d3PCmYTNP05Nj3yRJoEJaN:APA91bFITY5j8XOdg1f64O3mjuITUiwkOp4GUnDxx9NWoyx0KOrt-rAyIRbXgoz7aVqBD4pRGuBeTxxwO2OLG3SXLyvI0i-urEsZ2RNGaP9hKNEf2mcHBSRwMxWVMfED4BPoXaB4nh4r'];
 
     var notification_body = {
         'notification': notification,
