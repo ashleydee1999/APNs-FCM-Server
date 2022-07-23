@@ -105,8 +105,8 @@ app.post('/sendToAll', (req, res, next) => {
 
      var contactUpdatedPayload = {
         "id":1306,
-        "firstName":"Jake",
-        "lastName":"Paul",
+        "firstName":"Mike",
+        "lastName":"Mapiano",
         "companyName":"",
         "department":"",
         "mobileNumbers":{
@@ -121,7 +121,7 @@ app.post('/sendToAll', (req, res, next) => {
         "emails":{
            "emailList":[
               {
-                 "email":"paul@yahoo.co.us",
+                 "email":"ash@yiya.co.za",
                  "type":"work",
                  "default":false
               }
@@ -196,11 +196,11 @@ app.post('/sendToAll', (req, res, next) => {
     var data = {
         "type": "UPDATED",
         "topic": "CONTACTS",
-        "resource": "CONTACTS",
+        "isSilentNotif": false,
         "payload": contactUpdatedPayload,
     };
 
-    var fcm_tokens = ['d3PCmYTNP05Nj3yRJoEJaN:APA91bFITY5j8XOdg1f64O3mjuITUiwkOp4GUnDxx9NWoyx0KOrt-rAyIRbXgoz7aVqBD4pRGuBeTxxwO2OLG3SXLyvI0i-urEsZ2RNGaP9hKNEf2mcHBSRwMxWVMfED4BPoXaB4nh4r'];
+    var fcm_tokens = ['dwpP2-mzr0rohQPwP-FBQr:APA91bEyEn1Py3ti7ms-M_Dqlp-R63JYWkeo79Bw76sgL4ZE2TcqGi7Tej3_iN2LQ9SGSnUaZTpJ0KIGy9eToQW3NxpUUF-cHr0rFVezHt90oQpoNZyMvhyuQTmHpcLrp5p3MlE8RlKy'];
 
     var notification_body = {
         'notification': notification,
